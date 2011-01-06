@@ -1,5 +1,5 @@
 #!/bin/sh
-VERSION=0.14.1
+VERSION=0.14.2
 DOWNLOAD="http://github.com/downloads/elasticsearch/elasticsearch/elasticsearch-$VERSION.tar.gz"
 
 # download
