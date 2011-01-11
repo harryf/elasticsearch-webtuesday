@@ -16,7 +16,7 @@ Downloads, extracts and starts elasticsearch.
 
 Parsed the rss feed of http://techup.ch (which on the day of the talk, didn't have it's
 own search engine) and HTTP PUT the docs into elastic search for indexing. Once done,
-opened (http://localhost:9200/techup/events/_search?q=web) in browser to show we now have
+opened [this url](http://localhost:9200/techup/events/_search?q=web) in browser to show we now have
 a working search engine.
 
 Second part was showing off elastic searches couchdb river. First stop elasticsearch
@@ -31,9 +31,7 @@ Next start a fresh instance of CouchDB ( used Couch.io for OS X ) then run
     $ ./couch_river.sh
 
 ...to create couchdb database, add two demo docs, configure couchdb river then open
-the following URL in a browser;
-
-(http://localhost:9200/techup_couch/techup_couch/_search?q=_all:chuchi)
+[this URL](http://localhost:9200/techup_couch/techup_couch/_search?q=_all:chuchi) in a browser;
 
 Then switch back to CouchDB GUI, edit a document then refresh the URL to show the
 update.
@@ -45,8 +43,8 @@ Finally demoed CouchDB clustering by starting a second instance on same machine 
 ...watching the logs to see master election and opening the following URLs to show
 the cluster and that both nodes see the same index content;
 
-* (http://localhost:9200/_cluster/state?pretty=true) - cluster state
-* (http://localhost:9200/techup/events/_search?q=java*) - first node
-* (http://localhost:9201/techup/events/_search?q=java*) - second node
+* [cluster state](http://localhost:9200/_cluster/state?pretty=true)
+* [first node](http://localhost:9200/techup/events/_search?q=java*)
+* [second node](http://localhost:9201/techup/events/_search?q=java*)
 
 
